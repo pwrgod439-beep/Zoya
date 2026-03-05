@@ -1,0 +1,128 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0b0b14;
+color:white;
+height:100vh;
+overflow:hidden;
+}
+
+/* main container */
+
+.container{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+text-align:center;
+}
+
+/* logo */
+
+.logo{
+width:120px;
+margin-bottom:20px;
+animation:float 4s ease-in-out infinite;
+}
+
+/* title */
+
+h1{
+font-size:48px;
+color:#b87cff;
+margin-bottom:5px;
+}
+
+/* subtitle */
+
+.subtitle{
+opacity:0.8;
+margin-bottom:30px;
+}
+
+/* buttons */
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 26px;
+background:#7a3cff;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#9b63ff;
+transform:scale(1.05);
+}
+
+/* floating animation */
+
+@keyframes float{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-10px);
+}
+100%{
+transform:translateY(0px);
+}
+}
+
+/* star background */
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+.stars::after{
+content:"";
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+
+box-shadow:
+50px 80px white,
+120px 200px white,
+200px 150px white,
+300px 400px white,
+400px 120px white,
+500px 300px white,
+600px 200px white,
+700px 350px white,
+800px 100px white,
+900px 250px white,
+1000px 450px white,
+1100px 150px white,
+1200px 350px white,
+1300px 200px white;
+
+animation:stars 10s linear infinite;
+}
+
+@keyframes stars{
+0%{
+transform:translateY(-200px);
+}
+100%{
+transform:translateY(1200px);
+}
+}
